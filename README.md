@@ -1,3 +1,3 @@
 # selenium-glance
 
-Hi!
+JUST SOME EXAMPLE FOR PRACTCING SELENIUM
