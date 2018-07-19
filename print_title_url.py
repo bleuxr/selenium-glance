@@ -1,6 +1,5 @@
 from selenium import webdriver
 from time import sleep
-import os
 
 dr=webdriver.Chrome()
 url='https://www.github.com'
