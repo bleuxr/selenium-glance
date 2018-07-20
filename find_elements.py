@@ -22,13 +22,6 @@ for input in inputs:
 
 time.sleep(1)
 
-dr.find_elements_by_tag_name('input')
-for input in inputs:
-    if input.get_attribute('type')=='checkbox':
-        input.click()
-
-time.sleep(1)
-
 dr.find_elements_by_css_selector('input[type=checkbox]').pop().click()
 time.sleep(1)
 
