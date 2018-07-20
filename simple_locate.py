@@ -22,3 +22,20 @@ sleep(1)
 e=dr.find_element_by_class_name('controls')
 dr.execute_script('$(arguments[0]).fadeOut().fadeIn()', e)
 sleep(1)
+
+link=dr.find_element_by_link_text('register')
+dr.execute_script('$(arguments[0]).fadeOut().fadeIn()',link)
+sleep(1)
+
+link=dr.find_element_by_partial_link_text('reg')
+dr.execute_script('$(arguments[0]).fadeOut().fadeIn()',link)
+sleep(1)
+
+div=dr.find_elements_by_css_selector('.controls')
+dr.execute_script('$(arguments[0]).fadeOut().fadeIn()',div)
+sleep(1)
+
+dr.find_element_by_xpath('/html/body/form/div[3]/div/label/input').click()
+sleep(2)
+
+dr.quit()
