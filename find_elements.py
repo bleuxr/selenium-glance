@@ -3,7 +3,7 @@ import time
 import os
 
 dr=webdriver.Chrome()
-file_path='file:///'+os.path.abspath('checkbox.html')
+file_path='file:///'+os.path.abspath('selenium-glance/checkbox.html')
 dr.get(file_path)
 
 checkboxes = dr.find_elements_by_css_selector('input[type=checkbox]')
