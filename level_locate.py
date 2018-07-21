@@ -4,7 +4,7 @@ import time
 import os
 
 dr=webdriver.Chrome()
-file_path='file:///'+os.path.abspath('selenium-glance/level_locate.html')
+file_path='file:///'+os.path.abspath('level_locate.html')
 dr.get(file_path)
 
 dr.find_element_by_link_text('Link1').click()
