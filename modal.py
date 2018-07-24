@@ -10,7 +10,6 @@ file_path = 'file:///' + os.path.abspath('modal.html')
 dr.get(file_path)
 sleep(1)
 
-#bugs: sometimes show_modal won't show
 dr.find_element_by_id('show_modal').click()
 
 wait = ui.WebDriverWait(dr, 10)
