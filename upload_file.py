@@ -9,7 +9,8 @@ file_path = 'file:///' + os.path.abspath('upload_file.html')
 
 dr.get(file_path)
 
-dr.find_element_by_name('file').send_keys('./hello.py')
+#it need absolutePath
+dr.find_element_by_name('file').send_keys('D:/selenium-glance/hello.py')
 
 sleep(2)
 dr.quit()
