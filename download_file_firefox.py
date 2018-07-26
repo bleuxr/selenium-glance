@@ -1,14 +1,15 @@
-import os
-
 from selenium import webdriver
+from time import sleep
 
-fp = webdriver.FirefoxProfile()
+profile = webdriver.FirefoxProfile()
+profile.set_preference('browser.download.dir', 'd:\\')
+profile.set_preference('browser.download.folderList', 2)
+profile.set_preference('browser.download.manager.showWhenStarting', False)
+profile.set_preference('browser.helperApps.neverAsk.saveToDisk', 'application/zip')
 
-fp.set_preference("browser.download.folderList",2)
-fp.set_preference("browser.download.manager.showWhenStarting",False)
-fp.set_preference("browser.download.dir", os.getcwd())
-fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
+driver = webdriver.Firefox(firefox_profile=profile)
 
-browser = webdriver.Firefox(firefox_profile=fp)
-browser.get("http://pypi.python.org/pypi/selenium")
-browser.find_element_by_partial_link_text("selenium-2").click()
+driver.get('http://sahitest.com/demo/saveAs.htm')
+driver.find_element_by_xpath('//a[text()="testsaveas.zip"]').click()
+sleep(3)
+driver.quit()
